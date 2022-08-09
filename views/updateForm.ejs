@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+<!--form nhap-->
+<form method="post" action="/updateConfirm" enctype="application/x-www-form-urlencoded">
+    <input name="id" value="<%= sinhvien._id %>">
+    <input name="tenSV" value="<%= sinhvien.name %>" placeholder="nhập tên sinh viên">
+    <input name="tuoiSV" value="<%= sinhvien.age %>" placeholder="nhập tuổi sinh viên">
+    <input name="diaChiSV" value="<%= sinhvien.address %>" placeholder="nhập tuổi địa chỉ">
+    <button type="submit">Update</button>
+</form>
+
+</body>
+</html>

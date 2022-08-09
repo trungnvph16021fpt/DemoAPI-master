@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+<!--form nhap-->
+<form method="post" action="/add" enctype="application/x-www-form-urlencoded">
+    <input name="tenSV" placeholder="nhập tên sinh viên">
+    <input name="tuoiSV" placeholder="nhập tuổi sinh viên">
+    <input name="diaChiSV" placeholder="nhập tuổi địa chỉ">
+    <button type="submit">Save</button>
+</form>
+
+<% for(var i = 0 ; i < data.length ; i++){ %>
+
+    <hr>
+    <h1><%= data[i].name %></h1>
+    <h1><%= data[i].age %></h1>
+    <h1><%= data[i].address %></h1>
+    <!--Dinh nghia button xoa theo ID-->
+    <a href="/delete/?id=<%= data[i]._id %>">Delete</a>
+    <!--Dinh nghia button sua theo ID-->
+    <a href="/update/?id=<%= data[i]._id %>">Update</a>
+
+<% } %>
+
+</body>
+</html>
